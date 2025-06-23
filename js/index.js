@@ -22,7 +22,7 @@ function validNameSite() {
     inputNameSite.classList.add("is-valid");
     inputNameSite.classList.remove("is-invalid");
   } else {
-    inputNameSite.classList.remove("is-invalid");
+    inputNameSite.classList.remove("is-valid");
     inputNameSite.classList.add("is-invalid");
   }
 }
@@ -31,7 +31,7 @@ function validUlrSite() {
     inputUrlSite.classList.add("is-valid");
     inputUrlSite.classList.remove("is-invalid");
   } else {
-    inputUrlSite.classList.remove("is-invalid");
+    inputUrlSite.classList.remove("is-valid");
     inputUrlSite.classList.add("is-invalid");
   }
 }
@@ -45,6 +45,7 @@ function addSite() {
     localStorage.setItem("sitesArr", JSON.stringify(sitesArr));
     displaySite();
     clearInput();
+    ClearValidation();
   } else {
     Swal.fire({
       title: `<h1 class="text-danger">Error validation</h1>`,
@@ -102,7 +103,15 @@ function displaySite() {
 function clearInput() {
   inputNameSite.value = "";
   inputUrlSite.value = "";
-  inputNameSite.focus();
+}
+
+function ClearValidation() {
+  console.log("done");
+
+  inputNameSite.classList.remove("is-invalid");
+  inputNameSite.classList.remove("is-valid");
+  inputUrlSite.classList.remove("is-invalid");
+  inputUrlSite.classList.remove("is-valid");
 }
 
 function deleteSite(indexSite) {
