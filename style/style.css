@@ -2,18 +2,18 @@
   background-color: #f7ecde;
 }
 
-.content-bookmark h1,
+.bookmark h1,
 .content-bookmark h2 {
   font-family: "Pacifico", cursive;
   font-weight: bold;
 }
 
-.content-bookmark h1 {
+.bookmark h1 {
   font-size: 50px;
   color: #352e28;
   width: fit-content;
 }
-.content-bookmark h1::before {
+.bookmark h1::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -24,7 +24,7 @@
   transition: height 0.3s;
   z-index: -1;
 }
-.content-bookmark h1:hover::before {
+.bookmark h1:hover::before {
   height: 50%;
 }
 .content-bookmark {
