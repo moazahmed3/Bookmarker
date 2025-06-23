@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarker</title>
+    <link rel="shortcut icon" href="img/bookmark.png" type="image/x-icon" />
+    <!-- fav icon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google font -->
+    <link rel="stylesheet" href="style/all.min.css" />
+    <!-- fortawesome -->
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="style/style.css" />
+    <!-- style file  -->
+  </head>
+  <body class="bg-main">
+    <section class="bookmark">
+      <div class="container py-5">
+        <h1 class="position-relative py-2 text-center m-auto">Bookmarker</h1>
+        <div class="content-bookmark mt-5 pt-5 pb-4">
+          <h2>Bookmark your favorite sites</h2>
+          <div class="mb-4">
+            <label
+              for="inputNameSite"
+              class="form-label d-flex align-items-center gap-2 fw-bolder"
+            >
+              <i class="fa-solid fa-earth-americas"></i>Site Name
+            </label>
+            <input
+              type="text"
+              name="inputNameSite"
+              id="inputNameSite"
+              class="form-control"
+              placeholder="Bookmark Name"
+              aria-describedby="helpId"
+              oninput="validNameSite()"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              for="inputUrlSite"
+              class="form-label d-flex align-items-center gap-2 fw-bolder"
+            >
+              <i class="fa-solid fa-link pe-0"></i>
+              Site URL
+            </label>
+            <input
+              type="text"
+              name="inputUrlSite"
+              id="inputUrlSite"
+              class="form-control"
+              placeholder="Website URL"
+              aria-describedby="helpId"
+              oninput="validUlrSite()"
+            />
+          </div>
+          <button
+            onclick="addSite()"
+            class="btn btn-success px-5 d-block m-auto"
+          >
+            Submit
+          </button>
+        </div>
+        <table class="table text-light mt-4 text-center">
+          <thead>
+            <tr>
+              <th>index</th>
+              <th>Website Name</th>
+              <th>Visit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- sweetalert2 -->
+    <script src="js/index.js"></script>
+    <!-- file js -->
+  </body>
+</html>

@@ -1,0 +1,66 @@
+.bg-main {
+  background-color: #f7ecde;
+}
+
+.content-bookmark h1,
+.content-bookmark h2 {
+  font-family: "Pacifico", cursive;
+  font-weight: bold;
+}
+
+.content-bookmark h1 {
+  font-size: 50px;
+  color: #352e28;
+  width: fit-content;
+}
+.content-bookmark h1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  left: 0;
+  bottom: 10px;
+  background-color: #fec260;
+  transition: height 0.3s;
+  z-index: -1;
+}
+.content-bookmark h1:hover::before {
+  height: 50%;
+}
+.content-bookmark {
+  border-width: 2px 0 2px 0;
+  border-style: dotted;
+  border-color: #352e28;
+}
+.content-bookmark h2 {
+  font-family: "Righteous", cursive;
+  font-size: 25px;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  width: fit-content;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: auto;
+}
+.content-bookmark h2::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f02e";
+  margin-right: 8px;
+}
+.content-bookmark h2::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f02e";
+  margin-left: 8px;
+}
+
+input::placeholder {
+  color: #888;
+  font-weight: 5 00;
+}
+
+.form-control:focus {
+  border-color: #fec260;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(254, 193, 96, 0.542);
+}
